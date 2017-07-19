@@ -3,7 +3,7 @@
 # procedure, symmetric, which takes a list as input, and returns the
 # boolean True if the list is symmetric and False if it is not.
 
-def symmetric (m):
+def symmetric (m):  #assuming it's a normal matrix and not []. If it's [] add if m:  ... else return True.
     if len (m) == len (m[0]): #revisa si es nxn
         i = 0 #fila y columna elegidas
         while i<len(m): #que vaya de numero en numero sin pasarse del limite
