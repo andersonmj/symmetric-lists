@@ -1,0 +1,51 @@
+# A list is symmetric if the first row is the same as the first column,
+# the second row is the same as the second column and so on. Write a
+# procedure, symmetric, which takes a list as input, and returns the
+# boolean True if the list is symmetric and False if it is not.
+
+def symmetric (m):
+    if len (m) == len (m[0]): #revisa si es nxn
+        i = 0 #fila y columna elegidas
+        while i<len(m): #que vaya de numero en numero sin pasarse del limite
+            j=0 #contador extra. 
+            while j < len (m): #que no se me pase
+                if m[i][j] == m [j][i]: #comparar
+                    j=j+1
+                else: 
+                    return False #in case they-re not equal
+            i=i+1
+        return True    
+    else: 
+        return False    
+    
+
+print symmetric([[1, 2, 3],
+                [2, 3, 4],
+                [3, 4, 1]])
+#>>> True
+
+print symmetric([["cat", "dog", "fish"],
+                ["dog", "dog", "fish"],
+                ["fish", "fish", "cat"]])
+#>>> True
+
+print symmetric([["cat", "dog", "fish"],
+                ["dog", "dog", "dog"],
+                ["fish","fish","cat"]])
+#>>> False
+
+
+print symmetric([[1, 2],
+                [2, 1]])
+#>>> True
+
+
+print symmetric([[1, 2, 3, 4],
+                [2, 3, 4, 5],
+                [3, 4, 5, 6]])
+#>>> False
+
+
+print symmetric([[1,2,3],
+                 [2,3,1]])
+#>>> False
