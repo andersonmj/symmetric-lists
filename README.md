@@ -1,2 +1,2 @@
 # symmetric-lists
-this is an exercise from Udacity Intro to CS
+This is an exercise of Udacity Intro to CS course that checks if two lists are symmetric. 
